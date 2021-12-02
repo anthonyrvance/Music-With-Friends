@@ -11,7 +11,7 @@
                     "id": "a822c004-a5fd-4aa3-aaff-2b212cd1af87",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(pressPoint=0.01)"
                 },
                 {
                     "name": "Look",

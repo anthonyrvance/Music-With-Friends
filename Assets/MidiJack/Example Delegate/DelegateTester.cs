@@ -1,25 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.VFX;
+﻿using UnityEngine;
 using MidiJack;
 
-public class PlayerController : MonoBehaviour
+public class DelegateTester : MonoBehaviour
 {
-    [SerializeField] private VisualEffect fireworks;
-
-    int[] notes;
-
-    private void Awake()
-    {
-        notes = new int[0];
-    }
-
-    private void Update()
-    {
-        
-    }
-
     void NoteOn(MidiChannel channel, int note, float velocity)
     {
         Debug.Log("NoteOn: " + channel + "," + note + "," + velocity);
