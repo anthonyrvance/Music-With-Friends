@@ -13,11 +13,20 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         notes = new int[0];
+
+        fireworks.outputEventReceived += OnOutputEventReceived;
     }
 
     private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+            fireworks.SendEvent("Fire");
+    }
+
+    void OnOutputEventReceived(VFXOutputEventArgs args)
+    {
+        Debug.Log(args.nameId + " firework explode");
+
     }
 
     void NoteOn(MidiChannel channel, int note, float velocity)
